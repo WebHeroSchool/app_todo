@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const count = 0;
+const phrase = false;
+
 function App() {
   return (
     <div className="App">
@@ -10,6 +13,38 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+
+        <p style={{
+          color: 'red'
+        }}>Hello world!</p>
+
+        <p>
+          {count}
+        </p>
+
+        <p>
+          {165}
+        </p>
+
+        <p>
+          {2+3}
+        </p>
+
+        <p>
+          {1 && 2 && 3}
+        </p>
+
+        <p>
+          {phrase ? 'Phrase is true' : 'Phrase is false'}
+        </p>
+        
+        <p>
+          {undefined}
+          {null}
+          {true}
+          {false}
+        </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
