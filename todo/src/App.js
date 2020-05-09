@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import * as nums from './numbers'
 
 const count = 0;
 const phrase = false;
@@ -14,6 +15,10 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
 
+       <p>
+         {nums.count*nums.length}
+       </p>
+       
         <p style={{
           color: 'red'
         }}>Hello world!</p>
