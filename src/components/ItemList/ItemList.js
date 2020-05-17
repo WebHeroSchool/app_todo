@@ -1,10 +1,21 @@
 import React from 'react';
-import Item from '../Item/Items'
+import Item from '../Item/Items';
 
-const ItemList = ({ todoItem }) => (<ul>
-    <li><Item todoItem={todoItem} /></li>
-    <li><Item todoItem={'Прописать props-ы'} /></li>
-    <li><Item todoItem={'Сделать все дела'} /></li>
-</ul>);
+const ItemList = props => { 
+    const todoItem = [ 
+    {id: 1, affair: 'Написать новое приложение'},
+    {id: 2, affair: 'Прописать props-ы'},
+    {id: 3, affair: 'Сделать все дела'},
+    {id: 4, affair: 'Постричься'}
+];
+
+return (
+    <ul>
+        {todoItem.map(item =>(
+            <li key={item.id}>{item.affair}</li>
+        ))}
+    </ul>
+);
+};
 
 export default ItemList;
