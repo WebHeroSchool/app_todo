@@ -1,0 +1,9 @@
+.wrap {
+    margin: auto;
+    width: 500px;
+}
+
+.title {
+    font-family: Helvetica;
+    color: red;
+}
