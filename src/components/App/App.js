@@ -4,19 +4,33 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const items = [
-    {id: 1, value: 'Написать новое приложение'},
-    {id: 2, value: 'Прописать props-ы'},
-    {id: 3, value: 'Сделать все дела'},
-    {id: 4, value: 'Постричься'},
-    {id: 5, value: 'Сделать перерыв'}
-];
+const App = () => {
+    const items = [
+        {   id: 1, 
+            value: 'Написать новое приложение', 
+            isDone:true
+        },
+        {   id: 2, 
+            value: 'Прописать props-ы', 
+            isDone:false
+        },
+        {   id: 3,
+            value: 'Сделать все дела',
+            isDone:true
+        },
+        {   id: 4,
+            value: 'Постричься',
+            isDone:false
+        }
+    ];
 
-const App = () => (<div className = {styles.wrap}>
-    <h1 className= {styles.title}>Список важных дел:</h1>
-    <InputItem />
-    <ItemList items={items} />
-    <Footer count={3} />
-</div>)
+ return (
+    <div className = {styles.wrap}>
+        <h1 className= {styles.title}>Список важных дел:</h1>
+        <InputItem />
+        <ItemList items={items} />
+        <Footer count={3} />
+    </div>);
+}
 
 export default App;
