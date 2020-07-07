@@ -2,8 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './Item.module.css';
 import DeleteIcon from '@material-ui/icons/Delete';
-
-
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 function Item ( props ) {
@@ -18,7 +17,7 @@ function Item ( props ) {
     return ( 
         <div className = {styles.wrap}>
             <ul className = {useStyles}>
-                {value} <DeleteIcon />
+              <Checkbox /> {value} <DeleteIcon className = {styles.delete} />
             </ul>
         </div>
     )
