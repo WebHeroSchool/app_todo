@@ -1,0 +1,12 @@
+.footer {
+    height: 70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-top: slateblue solid 1.5px;
+}
