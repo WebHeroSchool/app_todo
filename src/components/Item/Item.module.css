@@ -1,7 +1,18 @@
+.wrap {
+    padding-left: 30px;
+    width: 80%;
+}
+
 .item {
     color: #333;
+    padding: 0;
 }
 
 .done {
     color: #c4c4c4;
+    text-decoration: line-through;
+}
+
+.delete {
+    margin-left: 40px;
 }

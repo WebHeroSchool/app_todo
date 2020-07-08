@@ -1,14 +1,26 @@
 import React from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import styles from './Item.module.css';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Checkbox from '@material-ui/core/Checkbox';
 
-const Item = ({ value, isDone }) => (<span className={
-    classnames({
-        [styles.item]: true,
-        [styles.done]: isDone,
-    })
-}>
-    {value}
-</span>);
+
+function Item ( props ) {
+
+     const {value, isDone} = props;
+
+    const useStyles = classNames(
+        styles.item,
+        {[styles.done]: isDone},
+    )
+    
+    return ( 
+        <div className = {styles.wrap}>
+            <ul className = {useStyles}>
+              <Checkbox /> {value} <DeleteIcon className = {styles.delete} />
+            </ul>
+        </div>
+    )
+};
 
 export default Item;

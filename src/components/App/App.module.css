@@ -1,9 +1,23 @@
 .wrap {
-    margin: auto;
-    width: 500px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    border: 2px solid #f7f7ee;
+    border-radius: 10px;
+    background-color: #f7f7ee;
+    box-shadow: 5px 5px 20px 0 hsla(0,0%,80%,.7);
 }
 
 .title {
     font-family: Helvetica;
-    color: red;
+    color: #f50057;
 }
