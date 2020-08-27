@@ -27,6 +27,17 @@ class App extends React.Component {
         ]
     }
 
+    onClickDone = id => {
+        const newItemList = this.state.items.map(item => {
+            const newItem = { ...item };
+            if (item.id === id) {
+                newItem.isDone = !item.isDone;
+            }
+            return newItem;
+        })
+        this.setState ({ items: newItemList });
+    };
+
     render () {
            
      return (
@@ -34,7 +45,7 @@ class App extends React.Component {
                 <h1 className= {styles.title}>Список важных дел:</h1>
                 <div className = {styles.container}>
                     <InputItem />
-                    <ItemList items={this.state.items} />
+                    <ItemList items={this.state.items} onClickDone = {this.onClickDone} />
                     <Footer count={2} />
                 </div>
             </div>
