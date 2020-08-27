@@ -4,7 +4,12 @@ import Item from '../Item/Items';
 const ItemList = ({ items, onClickDone }) => {
     
     const itemsList = items.map(item => {
-        return <Item  value={item.value}  isDone={item.isDone} onClickDone = {onClickDone} />
+        return <Item  
+            value={item.value}  
+            isDone={item.isDone} 
+            id={item.id}
+            onClickDone={onClickDone} 
+        />
     })
 
     return (
