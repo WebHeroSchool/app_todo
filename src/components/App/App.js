@@ -38,9 +38,8 @@ class App extends React.Component {
         this.setState ({ items: newItemList });
     };
 
-    // onClickDelete = id => {
-        // const newItemList = 
-    // }
+    onClickDelete = (id) => this.setState((state) => ({ items: state.items.filter((item) => item.id !== id)}));
+
 
     render () {
            
@@ -49,7 +48,11 @@ class App extends React.Component {
                 <h1 className= {styles.title}>Список важных дел:</h1>
                 <div className = {styles.container}>
                     <InputItem />
-                    <ItemList items={this.state.items} onClickDone = {this.onClickDone} />
+                    <ItemList 
+                        items={this.state.items} 
+                        onClickDone = {this.onClickDone} 
+                        onClickDelete = {this.onClickDelete} 
+                    />
                     <Footer count={2} />
                 </div>
             </div>
