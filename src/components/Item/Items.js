@@ -7,7 +7,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 function Item ( props ) {
 
-     const {value, isDone, onClickDone, id} = props;
+     const {value, isDone, onClickDone, onClickDelete, id} = props;
 
     const useStyles = classNames(
         styles.item,
@@ -21,7 +21,10 @@ function Item ( props ) {
                 checked = {isDone}
                 tabIndex = {-1}
                 onClick = {() => onClickDone(id)}
-              /> {value} <DeleteIcon className = {styles.delete} />
+              /> {value} 
+              <DeleteIcon 
+                onClick = {() => onClickDelete(id)} 
+              />
             </ul>
         </div>
     )
