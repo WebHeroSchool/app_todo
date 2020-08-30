@@ -38,6 +38,10 @@ class App extends React.Component {
         this.setState ({ items: newItemList });
     };
 
+    // onClickDelete = id => {
+        // const newItemList = 
+    // }
+
     render () {
            
      return (
