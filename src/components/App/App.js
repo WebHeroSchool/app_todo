@@ -24,8 +24,9 @@ class App extends React.Component {
                 value: 'Постричься',
                 isDone:false
             }
-        ]
-    }
+        ],
+        count: 4
+    };
 
     onClickDone = id => {
         const newItemList = this.state.items.map(item => {
@@ -34,12 +35,24 @@ class App extends React.Component {
                 newItem.isDone = !item.isDone;
             }
             return newItem;
-        })
+        });
+        
         this.setState ({ items: newItemList });
     };
 
     onClickDelete = (id) => this.setState((state) => ({ items: state.items.filter((item) => item.id !== id)}));
 
+    onClickAdd = () => this.setState(state => ({
+        items: [
+            ...state.items,
+            {
+                value: "Ckdck",
+                isDone: false,
+                id: state.count + 1
+            }
+        ],
+        count: state.count + 1
+    }));
 
     render () {
            
@@ -47,13 +60,13 @@ class App extends React.Component {
             <div className = {styles.wrap}>
                 <h1 className= {styles.title}>Список важных дел:</h1>
                 <div className = {styles.container}>
-                    <InputItem />
+                    <InputItem onClickAdd={this.onClickAdd} />
                     <ItemList 
                         items={this.state.items} 
                         onClickDone = {this.onClickDone} 
                         onClickDelete = {this.onClickDelete} 
                     />
-                    <Footer count={2} />
+                    <Footer count={this.state.count} />
                 </div>
             </div>
          );
