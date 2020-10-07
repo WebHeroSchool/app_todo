@@ -1,7 +1,12 @@
 .wrap {
-    padding-left: 30px;
+    padding-left: 50px;
 }
 
 .input {
     width: 480px;
+}
+
+.button {
+    width: 480px;
+    
 }
